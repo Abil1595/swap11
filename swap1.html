@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>swap</title>
+</head>
+<body>
+<script type="text/javascript">
+	function abi1()
+	{
+    var a=document.getElementById('a').value;
+	var b=document.getElementById('b').value;
+	var c=document.getElementById('c').value;
+	var d=document.getElementById('d').value;
+	var e=document.getElementById('e').value;  
+	var f=document.getElementById('f').value; 
+	var g=document.getElementById('g').value;
+	var h=document.getElementById('h').value;
+	var i=document.getElementById('i').value;
+
+	document.getElementById('a').innerHTML = a;
+		document.getElementById('b').innerHTML = b;
+		document.getElementById('c').innerHTML = c;
+		document.getElementById('e').innerHTML = e;
+		document.getElementById('f').innerHTML = f;
+		document.getElementById('g').innerHTML = g;
+		document.getElementById('h').innerHTML = h;
+		document.getElementById('i').innerHTML = i;
+		[a,b,c,d,e,f,g,h,i]=[f,a,b,c,e,d,i,g,h];
+
+	document.getElementById('a').value=a;
+	document.getElementById('b').value=b;
+	document.getElementById('c').value=c;
+	document.getElementById('d').value=d;
+	document.getElementById('e').value=e;
+	document.getElementById('f').value=f;
+	document.getElementById('g').value=g;
+	document.getElementById('h').value=h;
+	document.getElementById('i').value=i;
+}
+function abi11()
+{
+	var a=document.getElementById('a').innerText;
+	a=+a;
+	var b=a+1;
+
+	document.getElementById('new').value=b;
+
+	document.getElementById('new').style.background="green";
+}
+</script>
+<table border="1">
+	<tr>
+		<td><input type="text" id="a"></td>
+		<td ><input type="text" id="b"></td> 
+		<td ><input type="text" id="c"></td> 
+	</tr>
+	<tr>
+		<td><input type="text" id="d" value="15"></td>
+		<td ><input type="text" id="e"></td> 
+		<td ><input type="text" id="f"></td> 
+	</tr>
+	<tr>
+		<td ><input type="text" id="g"></td> 
+	<td ><input type="text" id="h"></td> 
+<td ><input type="text" id="i"></td> 	</tr>
+</table>
+<td><input type="text" id="new" onfocus="abi11()"></td>
+<button onclick="abi1()">click</button>
+</body>
+</html>
